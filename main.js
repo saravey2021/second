@@ -21,6 +21,13 @@ axios
 
 // 		 Change the display in the console as you want using chalk 
 //		 https://www.npmjs.com/package/chalk
+const axios = require('axios');
+const chalk = require('chalk');
+
+const url = "https://www.npmjs.com/package/chalk";
+axios
+.get(url)
+.then(response => console.log(chalk.bgGreen(response.data[0])))
 
 // 7 Run it : it should work
 
